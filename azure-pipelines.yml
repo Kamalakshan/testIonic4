@@ -16,6 +16,8 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
+    npm install -g ionic@latest
     npm install
-    npm run build
+    ionic cordova platform add android
+    ionic cordova build android
   displayName: 'npm install and build'
